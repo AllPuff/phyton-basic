@@ -36,6 +36,6 @@ def filter_numbers(num_list, filter_type):
     if filter_type == EVEN:
         return [number for number in num_list if number % 2 == 0]
 
-def prime_filter_numbers(num_list, filter_type):
+def filter_numbers_prime(num_list, filter_type):
     if filter_type == PRIME:
-        return [number for number in num_list if number == number(type(int))]
+        return [number for number in num_list if number(type(int))]
