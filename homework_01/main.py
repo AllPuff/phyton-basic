@@ -38,4 +38,4 @@ def filter_numbers(num_list, filter_type):
 
 def prime_filter_numbers(num_list, filter_type):
     if filter_type == PRIME:
-        return [number for number in num_list if number == type(int)]
+        return [number for number in num_list if number == number(type(int))]
