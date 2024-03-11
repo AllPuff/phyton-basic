@@ -33,9 +33,7 @@ def filter_numbers(num_list, filter_type):
     """
     if filter_type == ODD:
         return [number for number in num_list if number % 2 != 0]
-    if filter_type == EVEN:
+    elif filter_type == EVEN:
         return [number for number in num_list if number % 2 == 0]
-
-def filter_numbers_prime(num_list, filter_type):
-    if filter_type == PRIME:
-        return [number for number in num_list if number(type(int))]
+    elif filter_type == PRIME:
+        return [number for number in num_list if number == type(int)]
