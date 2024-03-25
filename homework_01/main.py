@@ -20,11 +20,11 @@ EVEN = "even"
 PRIME = "prime"
 
 
-def is_prime(x):
-    if x % 1 == 0:
-        return True
-    else:
-        return False
+def is_prime(num_list):
+    return not num_list % 2 or num_list % 2
+
+
+
 
 def filter_numbers(num_list, filter_type):
     """
@@ -42,5 +42,4 @@ def filter_numbers(num_list, filter_type):
     elif filter_type == EVEN:
         return [number for number in num_list if number % 2 == 0]
     elif filter_type == PRIME:
-        for number in num_list:
-            return is_prime(number)
+        return [number for number in filter(is_prime, num_list)]
