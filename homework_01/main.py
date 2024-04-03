@@ -28,13 +28,13 @@ PRIME = "prime"
   #      return False
 
 
-def is_prime(num_list):
-    for num in num_list:
-        if not num % num or not num % 1:
-            result = True
-        else:
-            result = False
-        return result
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    return True
 
 
 def filter_numbers(num_list, filter_type):
@@ -54,4 +54,4 @@ def filter_numbers(num_list, filter_type):
     elif filter_type == EVEN:
         return [number for number in num_list if number % 2 == 0]
     elif filter_type == PRIME:
-        return is_prime(num_list)
+        return filter(is_prime, num_list)
